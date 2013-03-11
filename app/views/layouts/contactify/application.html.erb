@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Contactify</title>
+	  <%= stylesheet_link_tag    "contactify/application", :media => "all" %>
+	  <%= javascript_include_tag "contactify/application" %>
+	  <%= csrf_meta_tags %>
+	</head>
+
+	<body>
+		<div>
+			<%= yield %>
+		</div>
+	</body>
+</html>
