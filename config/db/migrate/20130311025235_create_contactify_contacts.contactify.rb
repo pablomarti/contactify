@@ -1,4 +1,3 @@
-# This migration comes from contactify (originally 20130309144313)
 class CreateContactifyContacts < ActiveRecord::Migration
   def change
     create_table :contactify_contacts do |t|
