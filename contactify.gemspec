@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Contactify::VERSION
   s.authors     = ["Pablo Marti"]
   s.email       = ["pablo.marti89@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "Manage your contacts with reCaptcha"
-  s.description = "Build the form to get contacts on your site using reCaptcha and the Rails resources for managing your contacts"
+  s.homepage    = "https://github.com/pablomarti/contactify"
+  s.summary     = "Manage your contacts with reCaptcha."
+  s.description = "Builds the form to get contacts on your site using reCaptcha and the Rails resources for managing your contacts."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]

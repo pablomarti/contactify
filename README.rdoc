@@ -1,3 +1,28 @@
 = Contactify
 
-This project rocks and uses MIT-LICENSE.
+Manage your contacts with reCaptcha.
+
+Builds the form to get contacts on your site using reCaptcha and the Rails resources for managing your contacts.
+
+
+== Installation
+
+1. Inside your project: <tt>mkdir vendor/engines</tt>
+
+2. Inside <tt>your_project/vendor/engines</tt> get the engine: <tt>git clone https://github.com/pablomarti/contactify</tt>
+
+3. Add to your Gemfile: <tt>gem 'contactify', :path => "vendor/engines/contactify"</tt>
+
+4. Run <tt>bundle</tt>
+
+4. Execute: <tt>rails generate contactify:install</tt>
+
+5. Run migrations: <tt>rake db:migrate</tt>
+
+6. Get your keys: http://www.google.com/recaptcha
+
+7. Add your keys to: <tt>your_project/config/initializers/recaptcha.rb</tt>
+
+8. Add to your routes.rb: <tt>mount Contactify::Engine => "/contactify", :as => "contactify_engine"</tt>
+
+9. Add the link to the Contact Page: <tt><%= link_to "New contact", contactify_engine.contact_us_path %></tt>
