@@ -9,7 +9,7 @@ Builds the form to get contacts on your site using reCaptcha and the Rails resou
 
 1. Inside your project: <tt>mkdir vendor/engines</tt>
 
-2. Inside <tt>your_project/vendor/engines</tt> get the engine: <tt>git clone https://github.com/pablomarti/contactify</tt>
+2. Inside <tt>your_project/vendor/engines</tt> get the engine: <tt>git clone git@github.com:pablomarti/contactify.git</tt>
 
 3. Add to your Gemfile: <tt>gem 'contactify', :path => "vendor/engines/contactify"</tt>
 
