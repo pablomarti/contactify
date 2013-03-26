@@ -1,5 +1,3 @@
-require_dependency "contactify/application_controller"
-
 module Contactify
   class ContactsController < ApplicationController
     # GET /contacts
