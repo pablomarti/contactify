@@ -7,6 +7,8 @@ module Contactify
   class Engine < ::Rails::Engine
     isolate_namespace Contactify
 
+    config.generators.load_generators
+
     config.before_configuration do
       env_file = File.join(Rails.root, 'config', 'contactify.yml')
       YAML.load(File.open(env_file)).each do |key, value|
