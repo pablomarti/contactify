@@ -7,22 +7,20 @@ Builds the form to get contacts on your site using reCaptcha and the Rails resou
 
 == Installation
 
-1. Inside your project: <tt>mkdir vendor/engines</tt>
+1. Add to your Gemfile: <tt>gem 'contactify'</tt>
 
-2. Inside <tt>your_project/vendor/engines</tt> get the engine: <tt>git clone git@github.com:pablomarti/contactify.git</tt>
+2. Run <tt>bundle</tt>
 
-3. Add to your Gemfile: <tt>gem 'contactify', :path => "vendor/engines/contactify"</tt>
+3. Execute: <tt>rails generate contactify:install</tt>
 
-4. Run <tt>bundle</tt>
+4. Run migrations: <tt>rake db:migrate</tt>
 
-4. Execute: <tt>rails generate contactify:install</tt>
+5. Get your keys: http://www.google.com/recaptcha
 
-5. Run migrations: <tt>rake db:migrate</tt>
+6. Add your keys to: <tt>your_project/config/initializers/recaptcha.rb</tt>
 
-6. Get your keys: http://www.google.com/recaptcha
+7. Add to your routes.rb: <tt>mount Contactify::Engine => "/contactify", :as => "contactify_engine"</tt>
 
-7. Add your keys to: <tt>your_project/config/initializers/recaptcha.rb</tt>
+8. Add the link to the Contact Page: <tt><%= link_to "New contact", contactify_engine.contact_us_path %></tt>
 
-8. Add to your routes.rb: <tt>mount Contactify::Engine => "/contactify", :as => "contactify_engine"</tt>
-
-9. Add the link to the Contact Page: <tt><%= link_to "New contact", contactify_engine.contact_us_path %></tt>
+9. Add a link in your backend so you can manage your contacts: <tt><%= link_to "Contacts", contactify.contacts_path %></tt>
