@@ -4,12 +4,9 @@ module Contactify
       source_root File.expand_path("../templates", __FILE__)
       desc "Install  Contactify"
 
-      def create_initializer_file
-        #create_file "config/initializers/test.rb"
-      end
-
       def copy_initializer_file
         copy_file "recaptcha.rb", "config/initializers/recaptcha.rb"
+        copy_file "contactify.yml", "config/contactify.yml"
       end
 
       def copy_migrations
