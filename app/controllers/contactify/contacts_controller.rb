@@ -98,7 +98,7 @@ module Contactify
   
       respond_to do |format|
         if verify_recaptcha(:model => @contact, :message => "Oh! It's error with reCAPTCHA!") && @contact.save
-          format.html { redirect_to contact_us_path, notice: 'Thank you for contacting us.' }
+          format.html { redirect_to contact_us_path, notice: 'Gracias por contactarnos' }
           format.json { render json: @contact, status: :created, location: @contact }
         else
           format.html { render action: "new_public" }
