@@ -88,11 +88,11 @@ module Contactify
       @contact = Contact.new
   
       respond_to do |format|
-        format.html # new.html.erb
+        format.html { render :layout => ENV['CONTACTIFY_APPLICATION_LAYOUT'] }
         format.json { render json: @contact }
       end
 
-      render :layout => ENV['CONTACTIFY_APPLICATION_LAYOUT']
+      
     end
 
     def save_public
