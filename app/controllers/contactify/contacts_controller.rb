@@ -92,7 +92,7 @@ module Contactify
         format.json { render json: @contact }
       end
 
-      layout ENV['CONTACTIFY_APPLICATION_LAYOUT']
+      render :layout => ENV['CONTACTIFY_APPLICATION_LAYOUT']
     end
 
     def save_public
@@ -108,7 +108,7 @@ module Contactify
         end
       end
 
-      layout ENV['CONTACTIFY_APPLICATION_LAYOUT']
+      render :layout => ENV['CONTACTIFY_APPLICATION_LAYOUT']
     end
 
   end
