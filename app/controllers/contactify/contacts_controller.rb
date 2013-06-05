@@ -1,5 +1,7 @@
 module Contactify
   class ContactsController < ApplicationController
+
+    layout ENV['CONTACTIFY_ADMIN_LAYOUT']
     # GET /contacts
     # GET /contacts.json
     def index
@@ -89,6 +91,8 @@ module Contactify
         format.html # new.html.erb
         format.json { render json: @contact }
       end
+
+      layout ENV['CONTACTIFY_APPLICATION_LAYOUT']
     end
 
     def save_public
@@ -103,6 +107,8 @@ module Contactify
           format.json { render json: @contact.errors, status: :unprocessable_entity }
         end
       end
+
+      layout ENV['CONTACTIFY_APPLICATION_LAYOUT']
     end
 
   end
