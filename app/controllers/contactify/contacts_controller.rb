@@ -103,12 +103,10 @@ module Contactify
           format.html { redirect_to contact_us_path, notice: 'Gracias por contactarnos' }
           format.json { render json: @contact, status: :created, location: @contact }
         else
-          format.html { render action: "new_public" }
+          format.html { render action: "new_public", :layout => ENV['CONTACTIFY_APPLICATION_LAYOUT'] }
           format.json { render json: @contact.errors, status: :unprocessable_entity }
         end
       end
-
-      render :layout => ENV['CONTACTIFY_APPLICATION_LAYOUT']
     end
 
   end
