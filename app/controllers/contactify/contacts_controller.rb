@@ -5,7 +5,7 @@ module Contactify
     # GET /contacts
     # GET /contacts.json
     def index
-      @contacts = Contact.all
+      @contacts = Contact.order("id DESC")
   
       respond_to do |format|
         format.html # index.html.erb
