@@ -1,7 +1,7 @@
 module Contactify
   module Concerns
     module Controllers
-      module Contacts
+      module ContactsController
         extend ActiveSupport::Concern
 	    
 	    included do	 
